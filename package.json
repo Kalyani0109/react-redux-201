@@ -1,0 +1,105 @@
+{
+  "name": "react_201",
+  "version": "1.0.0",
+  "description": "React+ReduxApp",
+  "scripts": {
+    "start": "run-p start:dev start:api",
+    "start:dev": "webpack-dev-server --config webpack.config.js",
+    "prestart:api": "node src/DataBase/createMockDB.js",
+    "start:api": "nodemon src/DataBase/apiServer.js"
+  },
+  "author": "kalyani",
+  "license": "ISC",
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "bootstrap": "^4.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0",
+    "passport": "0.4.1",
+    "passport-local": "1.0.0",
+    "passport-facebook": "3.0.0",
+    "express-session": "1.17.1",
+    "json-server": "0.16.1",
+    "babel-polyfill": "6.26.0",
+    "passport-google-oauth": "2.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.3.4",
+    "babel-eslint": "10.1.0",
+    "babel-loader": "8.0.5",
+    "babel-preset-react-app": "9.1.2",
+    "css-loader": "4.2.1",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.15.3",
+    "eslint": "7.6.0",
+    "eslint-loader": "4.0.2",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-react": "7.20.6",
+    "fetch-mock": "9.10.6",
+    "http-server": "0.12.3",
+    "jest": "26.4.0",
+    "json-server": "0.16.1",
+    "mini-css-extract-plugin": "0.10.0",
+    "node-fetch": "2.6.0",
+    "npm-run-all": "4.1.5",
+    "react-test-renderer": "16.13.1",
+    "react-testing-library": "8.0.1",
+    "redux-immutable-state-invariant": "2.1.0",
+    "redux-mock-store": "1.5.4",
+    "rimraf": "3.0.2",
+    "style-loader": "1.2.1",
+    "webpack": "4.44.1",
+    "webpack-bundle-analyzer": "3.8.0",
+    "webpack-cli": "3.3.12",
+    "webpack-dev-server": "3.11.0",
+    "html-webpack-plugin": "4.3.0",
+    "nodemon": "2.0.4"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "babel": {
+    "presets": [
+      "babel-preset-react-app"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings"
+    ],
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaVersion": 2018,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "rules": {
+      "no-debugger": "off",
+      "no-console": "off",
+      "no-unused-vars": "warn",
+      "react/prop-types": "warn"
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "root": true
+  }
+}
